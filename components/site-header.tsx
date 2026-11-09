@@ -1,0 +1,5 @@
+/* Native document links avoid the deployed Vinext client-router failure and keep navigation usable without hydration. */
+/* oxlint-disable next/no-html-link-for-pages */
+import {ArrowUpRight,Search} from 'lucide-react';
+export function SiteHeader({active='today'}:{active?:'today'|'archive'}){return <header className="site-header"><div className="header-inner"><a href="/" className="brand" aria-label="十点晨报首页"><span className="brand-symbol">10<span>·</span></span><span className="brand-words">十点晨报<small>THE DAILY TEN</small></span></a><nav aria-label="主导航"><a className={active==='today'?'active':''} href="/">每日晨报</a><a className={active==='archive'?'active':''} href="/archive">历史新闻 <ArrowUpRight size={14}/></a></nav><a href="/archive" className="header-search" aria-label="搜索新闻"><Search size={18}/><span>搜索新闻</span><kbd>⌕</kbd></a></div></header>}
+export function SiteFooter(){return <footer className="site-footer"><span><strong>十点晨报</strong>　世界的变化，有迹可循。</span><span>时政 · 金融 · AI　／　北京时间 10:00</span></footer>}
